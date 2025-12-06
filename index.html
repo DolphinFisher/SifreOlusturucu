@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre Oluşturucu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Şifre Oluşturucu</h1>
+        
+        <div class="password-display-container">
+            <div class="input-group">
+                <input type="text" id="password-display" readonly placeholder="Şifreniz burada görünecek">
+                <button id="toggle-visibility" class="icon-btn" title="Şifreyi Göster/Gizle">
+                    <i class="fas fa-eye"></i>
+                </button>
+                <button id="copy-btn" class="icon-btn" title="Kopyala">
+                    <i class="fas fa-copy"></i>
+                </button>
+            </div>
+            <div id="copy-feedback" class="feedback hidden">Kopyalandı!</div>
+        </div>
+
+        <div class="strength-container">
+            <div class="strength-bar">
+                <div id="strength-fill"></div>
+            </div>
+            <span id="strength-text">Güç: -</span>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="length-slider">Şifre Uzunluğu: <span id="length-value">12</span></label>
+                <div class="slider-container">
+                    <input type="range" id="length-slider" min="8" max="64" value="12">
+                    <input type="number" id="length-number" min="8" max="64" value="12">
+                </div>
+            </div>
+
+            <div class="control-group checkbox-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="include-special">
+                    <span class="checkmark"></span>
+                    Özel Karakterler (!@#$%^&*)
+                </label>
+            </div>
+            
+            <!-- Adding standard options as well for better UX, though prompt highlighted special chars specifically -->
+            <div class="control-group checkbox-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="include-numbers" checked>
+                    <span class="checkmark"></span>
+                    Rakamlar (0-9)
+                </label>
+            </div>
+             <div class="control-group checkbox-group">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="include-uppercase" checked>
+                    <span class="checkmark"></span>
+                    Büyük Harfler (A-Z)
+                </label>
+            </div>
+
+            <button id="generate-btn">
+                <i class="fas fa-sync-alt"></i> Yeniden Oluştur
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
