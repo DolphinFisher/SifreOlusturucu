@@ -25,7 +25,3 @@ Bu proje statik bir web sitesidir. Kullanmak için herhangi bir kuruluma ihtiyac
 - HTML5
 - CSS3 (Responsive Tasarım)
 - JavaScript (Vanilla)
-
-## Ekran Görüntüleri
-
-*(Buraya ekran görüntüleri eklenebilir)*
